@@ -255,9 +255,9 @@ def run_once(dry_run=False):
                     f"🏠 {lst['location']} | {a['start']} → {a['end']}\n"
                     f"{lst['title'][:80]}\n"
                     f"🐾 {lst['animals'] or '?'} | 已申请 {a['apps']}/5\n"
-                    f"https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/l/{lst['id']}/",
-                    "📝 申请草稿（宠物名字自己从标题/详情页替换）：\n\n"
-                    + draft_application(lst["owner"], lst["animal_list"]),
+                    f"https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/l/{lst['id']}/\n"
+                    f"⬇️ 下条是草稿，宠物名字记得替换",
+                    draft_application(lst["owner"], lst["animal_list"]),
                 ))
 
     # prune assignments whose start date has passed
