@@ -1,0 +1,10 @@
+{
+  "urls": [
+    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/",
+    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/oakland/",
+    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/berkeley/"
+  ],
+  "center": { "lat": 37.77493, "lon": -122.41942 },
+  "radius_km": 60,
+  "max_applications": 4
+}
