@@ -6,5 +6,6 @@
   ],
   "center": { "lat": 37.77493, "lon": -122.41942 },
   "radius_km": 60,
-  "max_applications": 4
+  "max_applications": 4,
+  "max_alerts_per_run": 20
 }

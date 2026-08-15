@@ -277,7 +277,10 @@ def run_once(dry_run=False):
         elif first_run:
             log("first run: seeding state, not sending alerts")
         else:
-            for alert, draft in alerts[:8]:
+            cap = cfg.get("max_alerts_per_run", 20)
+            if len(alerts) > cap:
+                log(f"capping alerts: {len(alerts)} found, sending {cap}")
+            for alert, draft in alerts[:cap]:
                 try:
                     telegram_send(token, chat_id, alert)
                     telegram_send(token, chat_id, draft)
