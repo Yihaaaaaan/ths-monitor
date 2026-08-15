@@ -134,16 +134,57 @@ def parse_listings(html):
                 "confirmed": confirmed,
             })
 
+        owner = re.search(r'"ownerName":"([^"]+)"', seg)
         listings.append({
             "id": lid,
             "title": title,
             "location": loc.group(1) if loc else "?",
             "lat": float(coords.group(1)) if coords else None,
             "lon": float(coords.group(2)) if coords else None,
+            "owner": owner.group(1) if owner else "there",
+            "animal_list": [(n, int(c)) for n, c in animals],
             "animals": ", ".join(f"{n}x{c}" for n, c in animals),
             "assignments": assigns,
         })
     return listings
+
+
+NUM_WORDS = {1: "", 2: "two ", 3: "three ", 4: "four ", 5: "five "}
+
+
+def draft_application(owner, animal_list):
+    """Fill Yihan's application template from listing data (pure string work,
+    no LLM). Pet names aren't in the search page — swap them in from the
+    listing title before sending."""
+    if not animal_list:
+        animal_list = [("pet", 1)]
+    parts = []
+    for name, count in animal_list:
+        word = NUM_WORDS.get(count, f"{count} ")
+        parts.append(f"{word}{name}{'s' if count > 1 else ''}")
+    pets = " and ".join(parts)
+    total = sum(c for _, c in animal_list)
+    look = "look" if total > 1 else "looks"
+    species = " and ".join(
+        f"{n}s" for n in dict.fromkeys(n for n, _ in animal_list))
+    has_dog = any(n == "dog" for n, _ in animal_list)
+    walk = (" I'm also happy to keep up their daily walk routine."
+            if has_dog else "")
+    them = "them"
+    return (
+        f"Hi {owner},\n\n"
+        f"My name is Yihan! Your {pets} {look} absolutely adorable, and I'd "
+        f"love to keep {them} company while you're away ☺️\n\n"
+        f"I work remotely as a research assistant for Stanford University, so "
+        f"I'm home most of the day and love spending time with {species}. I'd "
+        f"be very happy to keep {them} company, give {them} lots of attention "
+        f"and cuddles, and make sure they feel comfortable while you're "
+        f"away.{walk}\n\n"
+        f"Your home and neighborhood also look lovely!\n\n"
+        f"I'd also be happy to jump on a video call if that would be easier.\n\n"
+        f"Looking forward to hearing from you!\n\n"
+        f"Best,\nYihan"
+    )
 
 
 def telegram_send(token, chat_id, text):
@@ -210,12 +251,14 @@ def run_once(dry_run=False):
                     continue
                 if a["apps"] is None or a["apps"] > max_apps:
                     continue
-                alerts.append(
+                alerts.append((
                     f"🏠 {lst['location']} | {a['start']} → {a['end']}\n"
                     f"{lst['title'][:80]}\n"
                     f"🐾 {lst['animals'] or '?'} | 已申请 {a['apps']}/5\n"
-                    f"https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/l/{lst['id']}/"
-                )
+                    f"https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/l/{lst['id']}/",
+                    "📝 申请草稿（宠物名字自己从标题/详情页替换）：\n\n"
+                    + draft_application(lst["owner"], lst["animal_list"]),
+                ))
 
     # prune assignments whose start date has passed
     state["seen"] = {k: v for k, v in state["seen"].items()
@@ -226,20 +269,18 @@ def run_once(dry_run=False):
     if alerts:
         log(f"{len(alerts)} new open sit(s)")
         # first run would flood with every existing listing — record silently
-        if dry_run:
-            for a in alerts:
-                print("\n--- ALERT ---\n" + a)
+        if dry_run or not token:
+            for alert, draft in alerts:
+                print("\n--- ALERT ---\n" + alert + "\n\n" + draft)
+            if not token and not dry_run:
+                log("no TELEGRAM_BOT_TOKEN — printed only")
         elif first_run:
             log("first run: seeding state, not sending alerts")
-        elif not token:
-            for a in alerts:
-                print("\n--- ALERT ---\n" + a)
-            if not token and not dry_run:
-                log("no TELEGRAM_BOT_TOKEN in .env — printed only")
         else:
-            for a in alerts[:8]:
+            for alert, draft in alerts[:8]:
                 try:
-                    telegram_send(token, chat_id, a)
+                    telegram_send(token, chat_id, alert)
+                    telegram_send(token, chat_id, draft)
                 except Exception as e:
                     log(f"telegram send failed: {e}")
     else:
