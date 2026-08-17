@@ -249,6 +249,10 @@ def run_once(dry_run=False):
                     continue
                 if a["start"] < today:
                     continue
+                windows = cfg.get("start_windows")
+                if windows and not any(lo <= a["start"] <= hi
+                                       for lo, hi in windows):
+                    continue
                 if a["apps"] is None or a["apps"] > max_apps:
                     continue
                 alerts.append((

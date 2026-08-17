@@ -7,5 +7,9 @@
   "center": { "lat": 37.77493, "lon": -122.41942 },
   "radius_km": 60,
   "max_applications": 4,
-  "max_alerts_per_run": 20
+  "max_alerts_per_run": 20,
+  "start_windows": [
+    ["2026-08-16", "2026-08-28"],
+    ["2026-10-05", "2027-12-31"]
+  ]
 }
