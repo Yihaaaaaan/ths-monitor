@@ -235,11 +235,13 @@ def run_once(dry_run=False):
         listings = parse_listings(html)
         log(f"{url} -> {len(listings)} listings")
 
+        windows = cfg.get("start_windows")
         for lst in listings:
+            d = None
             if lst["lat"] is not None:
                 d = haversine_km(center["lat"], center["lon"], lst["lat"], lst["lon"])
-                if d > radius:
-                    continue
+            if not windows and d is not None and d > radius:
+                continue
             for a in lst["assignments"]:
                 key = a["id"]
                 if key in state["seen"]:
@@ -249,10 +251,12 @@ def run_once(dry_run=False):
                     continue
                 if a["start"] < today:
                     continue
-                windows = cfg.get("start_windows")
-                if windows and not any(lo <= a["start"] <= hi
-                                       for lo, hi in windows):
-                    continue
+                if windows:
+                    # each window: {"from", "to", "radius_km" (optional, default global)}
+                    if not any(w["from"] <= a["start"] <= w["to"]
+                               and (d is None or d <= w.get("radius_km", radius))
+                               for w in windows):
+                        continue
                 if a["apps"] is None or a["apps"] > max_apps:
                     continue
                 alerts.append((
