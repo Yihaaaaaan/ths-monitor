@@ -229,12 +229,17 @@ def run_once(dry_run=False):
     alerts = []
     any_success = False
 
-    pages = cfg.get("pages", 1)
-    page_urls = [u if p == 1 else f"{u}?page={p}"
-                 for u in urls for p in range(1, pages + 1)]
+    default_pages = cfg.get("pages", 1)
+    page_urls = []
+    for u in urls:
+        # url entry: plain string, or {"url": ..., "pages": N}
+        base = u["url"] if isinstance(u, dict) else u
+        n = u.get("pages", default_pages) if isinstance(u, dict) else default_pages
+        for p in range(1, n + 1):
+            page_urls.append(base if p == 1 else f"{base}?page={p}")
     for i, url in enumerate(page_urls):
         if i > 0:
-            time.sleep(random.uniform(5, 15))
+            time.sleep(random.uniform(4, 9))
         try:
             html = fetch(url)
             any_success = True
