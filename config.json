@@ -1,39 +1,24 @@
 {
-  "urls": [
-    { "url": "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/", "pages": 2 },
-    { "url": "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/oakland/", "pages": 2 },
-    { "url": "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/berkeley/", "pages": 2 },
-    { "url": "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-jose/", "pages": 2 },
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-mateo/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/palo-alto/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/south-san-francisco/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-bruno/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/millbrae/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/burlingame/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/belmont/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-carlos/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/redwood-city/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/menlo-park/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/mountain-view/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/sunnyvale/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/santa-clara/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/daly-city/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/fremont/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/hayward/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-leandro/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/alameda/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/richmond/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/el-cerrito/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/walnut-creek/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/concord/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/pleasanton/"
-  ],
-  "pages": 1,
-  "center": { "lat": 37.77493, "lon": -122.41942 },
-  "radius_km": 90,
-  "max_applications": 4,
-  "max_alerts_per_run": 20,
-  "start_windows": [
-    { "from": "2026-09-12", "to": "2026-10-04", "end_by": "2026-10-06", "min_nights": 3, "note": "9/13-10/5 空窗。Caltrain+BART 沿线全覆盖（能坐火车到 SF 即可）。≥3 晚，结束≤10/6（差一天可与屋主/Berkeley 协调）。猫狗都推不做 filter，独处 6h+/公交 Yihan 自判" }
-  ]
+ "urls": [
+  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTA5LTEyIiwgImRhdGVUbyI6ICIyMDI2LTEwLTA2IiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2UsICJkdXJhdGlvbkluRGF5cyI6IHsibWluaW11bSI6IDN9fSwgInNvcnRCeSI6IFsic3RhcnRfZGF0ZSJdLCAiZ2VvUG9pbnQiOiB7ImxhdGl0dWRlIjogMzcuNzc0OTMsICJsb25naXR1ZGUiOiAtMTIyLjQxOTQyLCAiZGlzdGFuY2UiOiAiOTBrbSJ9fSwgImZhY2V0cyI6IFtdLCAic29ydCI6IFt7InB1Ymxpc2hlZCI6ICJkZXNjIn1dLCAicGFnZSI6IDEsICJyZXN1bHRzUGVyUGFnZSI6IDI0LCAiZGVidWciOiBmYWxzZSwgInN0YXRzIjogW119",
+  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTA5LTEyIiwgImRhdGVUbyI6ICIyMDI2LTEwLTA2IiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2UsICJkdXJhdGlvbkluRGF5cyI6IHsibWluaW11bSI6IDN9fSwgInNvcnRCeSI6IFsic3RhcnRfZGF0ZSJdLCAiZ2VvUG9pbnQiOiB7ImxhdGl0dWRlIjogMzcuNzc0OTMsICJsb25naXR1ZGUiOiAtMTIyLjQxOTQyLCAiZGlzdGFuY2UiOiAiOTBrbSJ9fSwgImZhY2V0cyI6IFtdLCAic29ydCI6IFt7InB1Ymxpc2hlZCI6ICJkZXNjIn1dLCAicGFnZSI6IDIsICJyZXN1bHRzUGVyUGFnZSI6IDI0LCAiZGVidWciOiBmYWxzZSwgInN0YXRzIjogW119",
+  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTA5LTEyIiwgImRhdGVUbyI6ICIyMDI2LTEwLTA2IiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2UsICJkdXJhdGlvbkluRGF5cyI6IHsibWluaW11bSI6IDN9fSwgInNvcnRCeSI6IFsic3RhcnRfZGF0ZSJdLCAiZ2VvUG9pbnQiOiB7ImxhdGl0dWRlIjogMzcuNzc0OTMsICJsb25naXR1ZGUiOiAtMTIyLjQxOTQyLCAiZGlzdGFuY2UiOiAiOTBrbSJ9fSwgImZhY2V0cyI6IFtdLCAic29ydCI6IFt7InB1Ymxpc2hlZCI6ICJkZXNjIn1dLCAicGFnZSI6IDMsICJyZXN1bHRzUGVyUGFnZSI6IDI0LCAiZGVidWciOiBmYWxzZSwgInN0YXRzIjogW119"
+ ],
+ "pages": 1,
+ "center": {
+  "lat": 37.77493,
+  "lon": -122.41942
+ },
+ "radius_km": 90,
+ "max_applications": 4,
+ "max_alerts_per_run": 20,
+ "start_windows": [
+  {
+   "from": "2026-09-12",
+   "to": "2026-10-04",
+   "end_by": "2026-10-06",
+   "min_nights": 3,
+   "note": "9/13-10/5 空窗。q= 搜索端点（湾区 90km、≥3 天、按开始日排序），3 页每轮。窗口过后改回城市页模式或更新 q 里的日期（q 是 base64 JSON，scripts/ths-monitor 下 make_config.py 思路重生成）"
+  }
+ ]
 }
