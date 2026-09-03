@@ -3,7 +3,9 @@
     "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/",
     "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/oakland/",
     "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/berkeley/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-jose/"
+    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-jose/",
+    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-mateo/",
+    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/palo-alto/"
   ],
   "pages": 2,
   "center": { "lat": 37.77493, "lon": -122.41942 },
@@ -11,6 +13,6 @@
   "max_applications": 4,
   "max_alerts_per_run": 20,
   "start_windows": [
-    { "from": "2026-09-03", "to": "2026-10-04", "end_by": "2026-10-05", "min_nights": 4, "note": "9/4-10/5 空窗（SF sit 提前到 9/4 结束，10/5 起 Berkeley sit）。湾区 90km，≥4 晚，结束不晚于 10/5。猫优先、狗可接受（可独处 6h+ 的才申，Yihan 自判）" }
+    { "from": "2026-09-12", "to": "2026-10-04", "end_by": "2026-10-05", "min_nights": 3, "note": "9/13-10/5 空窗（9/5-9/13 sit 已到手）。湾区 90km、≥3 晚、结束不晚于 10/5。猫优先；狗需可独处 6h+；要公交（后两条 Yihan 收推送自判）" }
   ]
 }
