@@ -3,19 +3,14 @@
     "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/",
     "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/oakland/",
     "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/berkeley/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/nevada/las-vegas/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/washington/seattle/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/los-angeles/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/sacramento/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/oregon/portland/",
-    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/utah/salt-lake-city/"
+    "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-jose/"
   ],
+  "pages": 2,
   "center": { "lat": 37.77493, "lon": -122.41942 },
-  "radius_km": 60,
+  "radius_km": 90,
   "max_applications": 4,
   "max_alerts_per_run": 20,
   "start_windows": [
-    { "from": "2026-08-16", "to": "2026-08-27", "radius_km": 99999, "note": "gap 8/18-8/28 全国找住，sit 结束日必须≤8/28（8/28 早10点前到 SF）；8/28 后删掉本窗口和多余城市 URL" },
-    { "from": "2026-10-05", "to": "2027-12-31", "note": "10/5 SF sit 结束后的下一段，只要湾区" }
+    { "from": "2026-09-03", "to": "2026-10-04", "end_by": "2026-10-05", "min_nights": 4, "note": "9/4-10/5 空窗（SF sit 提前到 9/4 结束，10/5 起 Berkeley sit）。湾区 90km，≥4 晚，结束不晚于 10/5。猫优先、狗可接受（可独处 6h+ 的才申，Yihan 自判）" }
   ]
 }

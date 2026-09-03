@@ -28,6 +28,13 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, date
 
+
+def nights(start, end):
+    try:
+        return (date.fromisoformat(end) - date.fromisoformat(start)).days
+    except ValueError:
+        return 0
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 CONFIG_PATH = os.path.join(HERE, "config.json")
@@ -222,7 +229,10 @@ def run_once(dry_run=False):
     alerts = []
     any_success = False
 
-    for i, url in enumerate(urls):
+    pages = cfg.get("pages", 1)
+    page_urls = [u if p == 1 else f"{u}?page={p}"
+                 for u in urls for p in range(1, pages + 1)]
+    for i, url in enumerate(page_urls):
         if i > 0:
             time.sleep(random.uniform(5, 15))
         try:
@@ -252,9 +262,11 @@ def run_once(dry_run=False):
                 if a["start"] < today:
                     continue
                 if windows:
-                    # each window: {"from", "to", "radius_km" (optional, default global)}
+                    # window: {"from", "to", "radius_km"?, "end_by"?, "min_nights"?}
                     if not any(w["from"] <= a["start"] <= w["to"]
                                and (d is None or d <= w.get("radius_km", radius))
+                               and a["end"] <= w.get("end_by", "9999")
+                               and nights(a["start"], a["end"]) >= w.get("min_nights", 0)
                                for w in windows):
                         continue
                 if a["apps"] is None or a["apps"] > max_apps:
