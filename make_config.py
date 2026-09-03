@@ -10,8 +10,9 @@ def make_url(page):
                 "dateTo": "2026-10-06",
                 "reviewing": False,
                 "confirmed": False,
-                "durationInDays": {"minimum": 4},
+                "durationInDays": {"minimum": 3},
             },
+            "pets": [{"type": "dog", "exclude": True}],
             "sortBy": ["start_date"],
             "geoPoint": {"latitude": 37.77493, "longitude": -122.41942, "distance": "90km"},
         },
@@ -33,10 +34,10 @@ cfg = {
     "max_applications": 4,
     "max_alerts_per_run": 20,
     "start_windows": [
-        {"from": "2026-09-12", "to": "2026-10-04", "end_by": "2026-10-06", "min_nights": 4,
-         "note": "9/13-10/5 空窗。q= 搜索端点（湾区 90km、≥4 晚、按开始日排序），3 页每轮。改参数：改本文件重跑生成 config，再同步 ths-monitor repo"}
+        {"from": "2026-09-12", "to": "2026-10-04", "end_by": "2026-10-06", "min_nights": 3,
+         "note": "9/13-10/5 空窗。q= 搜索端点（湾区 90km、≥3 晚、排除狗、按开始日排序），3 页每轮。改参数：改本文件重跑生成 config，再同步 ths-monitor repo"}
     ],
-    "exclude_species": [],
+    "exclude_species": ["dog"],
 }
 path = r"d:\02 Projects\08 Personal OS\Personal-OS-v1.0\scripts\ths-monitor\config.json"
 with open(path, "w", encoding="utf-8") as f:
