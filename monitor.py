@@ -276,8 +276,14 @@ def run_once(dry_run=False):
                         continue
                 if a["apps"] is None or a["apps"] > max_apps:
                     continue
+                species = {n for n, _ in lst["animal_list"]}
+                excl = set(cfg.get("exclude_species", []))
+                if excl and species & excl:
+                    continue
+                icon = ("🐱" if species == {"cat"}
+                        else "🐶" if "dog" in species else "🐾")
                 alerts.append((
-                    f"🏠 {lst['location']} | {a['start']} → {a['end']}\n"
+                    f"{icon} {lst['location']} | {a['start']} → {a['end']}\n"
                     f"{lst['title'][:80]}\n"
                     f"🐾 {lst['animals'] or '?'} | 已申请 {a['apps']}/5\n"
                     f"https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/l/{lst['id']}/\n"

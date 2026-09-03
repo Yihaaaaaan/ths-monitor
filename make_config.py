@@ -10,7 +10,7 @@ def make_url(page):
                 "dateTo": "2026-10-06",
                 "reviewing": False,
                 "confirmed": False,
-                "durationInDays": {"minimum": 3},
+                "durationInDays": {"minimum": 4},
             },
             "sortBy": ["start_date"],
             "geoPoint": {"latitude": 37.77493, "longitude": -122.41942, "distance": "90km"},
@@ -33,9 +33,10 @@ cfg = {
     "max_applications": 4,
     "max_alerts_per_run": 20,
     "start_windows": [
-        {"from": "2026-09-12", "to": "2026-10-04", "end_by": "2026-10-06", "min_nights": 3,
-         "note": "9/13-10/5 空窗。q= 搜索端点（湾区 90km、≥3 天、按开始日排序），3 页每轮。窗口过后改回城市页模式或更新 q 里的日期（q 是 base64 JSON，scripts/ths-monitor 下 make_config.py 思路重生成）"}
+        {"from": "2026-09-12", "to": "2026-10-04", "end_by": "2026-10-06", "min_nights": 4,
+         "note": "9/13-10/5 空窗。q= 搜索端点（湾区 90km、≥4 晚、按开始日排序），3 页每轮。改参数：改本文件重跑生成 config，再同步 ths-monitor repo"}
     ],
+    "exclude_species": [],
 }
 path = r"d:\02 Projects\08 Personal OS\Personal-OS-v1.0\scripts\ths-monitor\config.json"
 with open(path, "w", encoding="utf-8") as f:
