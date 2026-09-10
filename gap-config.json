@@ -1,0 +1,25 @@
+{
+ "urls": [
+  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTA5LTEzIiwgImRhdGVUbyI6ICIyMDI2LTA5LTIwIiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2V9LCAic29ydEJ5IjogWyJzdGFydF9kYXRlIl0sICJnZW9Qb2ludCI6IHsibGF0aXR1ZGUiOiAzNy43NzQ5MywgImxvbmdpdHVkZSI6IC0xMjIuNDE5NDIsICJkaXN0YW5jZSI6ICI5MGttIn19LCAiZmFjZXRzIjogW10sICJzb3J0IjogW3sicHVibGlzaGVkIjogImRlc2MifV0sICJwYWdlIjogMSwgInJlc3VsdHNQZXJQYWdlIjogMjQsICJkZWJ1ZyI6IGZhbHNlLCAic3RhdHMiOiBbXX0=",
+  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTA5LTEzIiwgImRhdGVUbyI6ICIyMDI2LTA5LTIwIiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2V9LCAic29ydEJ5IjogWyJzdGFydF9kYXRlIl0sICJnZW9Qb2ludCI6IHsibGF0aXR1ZGUiOiAzNy43NzQ5MywgImxvbmdpdHVkZSI6IC0xMjIuNDE5NDIsICJkaXN0YW5jZSI6ICI5MGttIn19LCAiZmFjZXRzIjogW10sICJzb3J0IjogW3sicHVibGlzaGVkIjogImRlc2MifV0sICJwYWdlIjogMiwgInJlc3VsdHNQZXJQYWdlIjogMjQsICJkZWJ1ZyI6IGZhbHNlLCAic3RhdHMiOiBbXX0=",
+  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTA5LTEzIiwgImRhdGVUbyI6ICIyMDI2LTA5LTIwIiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2V9LCAic29ydEJ5IjogWyJzdGFydF9kYXRlIl0sICJnZW9Qb2ludCI6IHsibGF0aXR1ZGUiOiAzNy43NzQ5MywgImxvbmdpdHVkZSI6IC0xMjIuNDE5NDIsICJkaXN0YW5jZSI6ICI5MGttIn19LCAiZmFjZXRzIjogW10sICJzb3J0IjogW3sicHVibGlzaGVkIjogImRlc2MifV0sICJwYWdlIjogMywgInJlc3VsdHNQZXJQYWdlIjogMjQsICJkZWJ1ZyI6IGZhbHNlLCAic3RhdHMiOiBbXX0="
+ ],
+ "pages": 1,
+ "center": {
+  "lat": 37.77493,
+  "lon": -122.41942
+ },
+ "radius_km": 90,
+ "max_applications": 4,
+ "max_alerts_per_run": 20,
+ "start_windows": [
+  {
+   "from": "2026-09-13",
+   "to": "2026-09-20",
+   "end_by": "2026-09-20",
+   "min_nights": 0,
+   "note": "9/13-9/20 gap housing，不限宠物、不限天数。湾区90km，按开始日排序。"
+  }
+ ],
+ "exclude_species": []
+}

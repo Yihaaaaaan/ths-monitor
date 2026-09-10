@@ -1,0 +1,34 @@
+name: monitor-gap
+
+on:
+  schedule:
+    - cron: "5,15,25,35,45,55 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monitor-gap
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run gap monitor
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python monitor.py --once --config gap-config.json --state gap-state.json
+
+      - name: Persist state
+        run: |
+          git config user.name "ths-monitor-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add gap-state.json
+          git diff --cached --quiet || git commit -m "gap-state update [skip ci]"
+          git push

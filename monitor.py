@@ -206,9 +206,11 @@ def telegram_send(token, chat_id, text):
         return json.loads(r.read().decode())
 
 
-def run_once(dry_run=False):
-    cfg = load_json(CONFIG_PATH, {})
-    state = load_json(STATE_PATH, {"seen": {}, "failures": 0, "last_attempt": 0})
+def run_once(dry_run=False, config_path=None, state_path=None):
+    config_path = config_path or CONFIG_PATH
+    state_path = state_path or STATE_PATH
+    cfg = load_json(config_path, {})
+    state = load_json(state_path, {"seen": {}, "failures": 0, "last_attempt": 0})
     env = read_env()
     token = env.get("TELEGRAM_BOT_TOKEN", "")
     chat_id = env.get("TELEGRAM_CHAT_ID", "")
@@ -296,7 +298,7 @@ def run_once(dry_run=False):
                      if v.get("start", "9999") >= today}
     state["failures"] = 0 if any_success else state.get("failures", 0) + 1
 
-    first_run = not os.path.exists(STATE_PATH)
+    first_run = not os.path.exists(state_path)
     if alerts:
         log(f"{len(alerts)} new open sit(s)")
         # first run would flood with every existing listing — record silently
@@ -321,7 +323,7 @@ def run_once(dry_run=False):
         log("no new open sits")
 
     if not dry_run:
-        save_json(STATE_PATH, state)
+        save_json(state_path, state)
 
 
 def main():
@@ -330,11 +332,13 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--scheduled", action="store_true",
                     help="add random start jitter (for Task Scheduler)")
+    ap.add_argument("--config", default=None, help="path to config JSON (default: config.json next to script)")
+    ap.add_argument("--state", default=None, help="path to state JSON (default: state.json next to script)")
     args = ap.parse_args()
 
     if args.scheduled:
         time.sleep(random.uniform(0, 45))
-    run_once(dry_run=args.dry_run)
+    run_once(dry_run=args.dry_run, config_path=args.config, state_path=args.state)
 
 
 if __name__ == "__main__":
