@@ -1,0 +1,35 @@
+name: monitor-fall
+
+on:
+  schedule:
+    - cron: "2,12,22,32,42,52 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monitor-fall
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run fall monitor
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python monitor.py --once --config fall-config.json --state fall-state.json
+
+      - name: Persist state
+        run: |
+          git config user.name "ths-monitor-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add fall-state.json
+          git diff --cached --quiet || git commit -m "fall-state update [skip ci]"
+          git pull --rebase -X ours origin main
+          git push

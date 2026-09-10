@@ -1,0 +1,26 @@
+{
+ "urls": [
+  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTEwLTI1IiwgImRhdGVUbyI6ICIyMDI2LTExLTMwIiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2UsICJkdXJhdGlvbkluRGF5cyI6IHsibWluaW11bSI6IDd9fSwgInBldHMiOiBbeyJ0eXBlIjogImRvZyIsICJleGNsdWRlIjogdHJ1ZX1dLCAic29ydEJ5IjogWyJzdGFydF9kYXRlIl0sICJnZW9Qb2ludCI6IHsibGF0aXR1ZGUiOiAzNy43NzQ5MywgImxvbmdpdHVkZSI6IC0xMjIuNDE5NDIsICJkaXN0YW5jZSI6ICI5MGttIn19LCAiZmFjZXRzIjogW10sICJzb3J0IjogW3sicHVibGlzaGVkIjogImRlc2MifV0sICJwYWdlIjogMSwgInJlc3VsdHNQZXJQYWdlIjogMjQsICJkZWJ1ZyI6IGZhbHNlLCAic3RhdHMiOiBbXX0=",
+  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTEwLTI1IiwgImRhdGVUbyI6ICIyMDI2LTExLTMwIiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2UsICJkdXJhdGlvbkluRGF5cyI6IHsibWluaW11bSI6IDd9fSwgInBldHMiOiBbeyJ0eXBlIjogImRvZyIsICJleGNsdWRlIjogdHJ1ZX1dLCAic29ydEJ5IjogWyJzdGFydF9kYXRlIl0sICJnZW9Qb2ludCI6IHsibGF0aXR1ZGUiOiAzNy43NzQ5MywgImxvbmdpdHVkZSI6IC0xMjIuNDE5NDIsICJkaXN0YW5jZSI6ICI5MGttIn19LCAiZmFjZXRzIjogW10sICJzb3J0IjogW3sicHVibGlzaGVkIjogImRlc2MifV0sICJwYWdlIjogMiwgInJlc3VsdHNQZXJQYWdlIjogMjQsICJkZWJ1ZyI6IGZhbHNlLCAic3RhdHMiOiBbXX0=",
+  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTEwLTI1IiwgImRhdGVUbyI6ICIyMDI2LTExLTMwIiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2UsICJkdXJhdGlvbkluRGF5cyI6IHsibWluaW11bSI6IDd9fSwgInBldHMiOiBbeyJ0eXBlIjogImRvZyIsICJleGNsdWRlIjogdHJ1ZX1dLCAic29ydEJ5IjogWyJzdGFydF9kYXRlIl0sICJnZW9Qb2ludCI6IHsibGF0aXR1ZGUiOiAzNy43NzQ5MywgImxvbmdpdHVkZSI6IC0xMjIuNDE5NDIsICJkaXN0YW5jZSI6ICI5MGttIn19LCAiZmFjZXRzIjogW10sICJzb3J0IjogW3sicHVibGlzaGVkIjogImRlc2MifV0sICJwYWdlIjogMywgInJlc3VsdHNQZXJQYWdlIjogMjQsICJkZWJ1ZyI6IGZhbHNlLCAic3RhdHMiOiBbXX0="
+ ],
+ "pages": 1,
+ "center": {
+  "lat": 37.77493,
+  "lon": -122.41942
+ },
+ "radius_km": 90,
+ "max_applications": 4,
+ "max_alerts_per_run": 20,
+ "start_windows": [
+  {
+   "from": "2026-10-25",
+   "to": "2026-11-30",
+   "min_nights": 7,
+   "note": "10/25 Berkeley sit 结束后的下一段：10/25-11/30 开始、≥7 晚、无狗、湾区 90km"
+  }
+ ],
+ "exclude_species": [
+  "dog"
+ ]
+}
