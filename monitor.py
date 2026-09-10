@@ -132,13 +132,17 @@ def parse_listings(html):
             a_end = amatches[j + 1].start() if j + 1 < len(amatches) else len(seg)
             a_seg = seg[am.start():a_end]
             ac = re.search(r'"applicationsCount":(\d+)', a_seg)
+            # server-side q filters (reviewing/confirmed:false) are unreliable —
+            # both states have been observed in results; must re-check locally
             confirmed = '"isConfirmed":true' in a_seg
+            reviewing = '"isReviewing":true' in a_seg
             assigns.append({
                 "id": am.group(1),
                 "start": am.group(2),
                 "end": am.group(3),
                 "apps": int(ac.group(1)) if ac else None,
                 "confirmed": confirmed,
+                "reviewing": reviewing,
             })
 
         owner = re.search(r'"ownerName":"([^"]+)"', seg)
@@ -264,7 +268,7 @@ def run_once(dry_run=False, config_path=None, state_path=None):
                 if key in state["seen"]:
                     continue
                 state["seen"][key] = {"first_seen": today, "start": a["start"]}
-                if a["confirmed"]:
+                if a["confirmed"] or a["reviewing"]:
                     continue
                 if a["start"] < today:
                     continue
