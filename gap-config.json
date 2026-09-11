@@ -1,7 +1,7 @@
 {
  "urls": [
-  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTA5LTEzIiwgImRhdGVUbyI6ICIyMDI2LTA5LTIwIiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2V9LCAic29ydEJ5IjogWyJzdGFydF9kYXRlIl0sICJnZW9Qb2ludCI6IHsibGF0aXR1ZGUiOiAzNy43NzQ5MywgImxvbmdpdHVkZSI6IC0xMjIuNDE5NDIsICJkaXN0YW5jZSI6ICI5MGttIn19LCAiZmFjZXRzIjogW10sICJzb3J0IjogW3sicHVibGlzaGVkIjogImRlc2MifV0sICJwYWdlIjogMSwgInJlc3VsdHNQZXJQYWdlIjogMjQsICJkZWJ1ZyI6IGZhbHNlLCAic3RhdHMiOiBbXX0=",
-  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTA5LTEzIiwgImRhdGVUbyI6ICIyMDI2LTA5LTIwIiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2V9LCAic29ydEJ5IjogWyJzdGFydF9kYXRlIl0sICJnZW9Qb2ludCI6IHsibGF0aXR1ZGUiOiAzNy43NzQ5MywgImxvbmdpdHVkZSI6IC0xMjIuNDE5NDIsICJkaXN0YW5jZSI6ICI5MGttIn19LCAiZmFjZXRzIjogW10sICJzb3J0IjogW3sicHVibGlzaGVkIjogImRlc2MifV0sICJwYWdlIjogMiwgInJlc3VsdHNQZXJQYWdlIjogMjQsICJkZWJ1ZyI6IGZhbHNlLCAic3RhdHMiOiBbXX0="
+  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTA5LTEyIiwgImRhdGVUbyI6ICIyMDI2LTA5LTE4IiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2V9LCAic29ydEJ5IjogWyJzdGFydF9kYXRlIl0sICJnZW9Qb2ludCI6IHsibGF0aXR1ZGUiOiAzNy43NzQ5MywgImxvbmdpdHVkZSI6IC0xMjIuNDE5NDIsICJkaXN0YW5jZSI6ICI5MGttIn19LCAiZmFjZXRzIjogW10sICJzb3J0IjogW3sicHVibGlzaGVkIjogImRlc2MifV0sICJwYWdlIjogMSwgInJlc3VsdHNQZXJQYWdlIjogMjQsICJkZWJ1ZyI6IGZhbHNlLCAic3RhdHMiOiBbXX0=",
+  "https://www.trustedhousesitters.com/house-and-pet-sitting-assignments/united-states/california/san-francisco/?q=eyJmaWx0ZXJzIjogeyJhY3RpdmVNZW1iZXJzaGlwIjogdHJ1ZSwgImFzc2lnbm1lbnRzIjogeyJkYXRlRnJvbSI6ICIyMDI2LTA5LTEyIiwgImRhdGVUbyI6ICIyMDI2LTA5LTE4IiwgInJldmlld2luZyI6IGZhbHNlLCAiY29uZmlybWVkIjogZmFsc2V9LCAic29ydEJ5IjogWyJzdGFydF9kYXRlIl0sICJnZW9Qb2ludCI6IHsibGF0aXR1ZGUiOiAzNy43NzQ5MywgImxvbmdpdHVkZSI6IC0xMjIuNDE5NDIsICJkaXN0YW5jZSI6ICI5MGttIn19LCAiZmFjZXRzIjogW10sICJzb3J0IjogW3sicHVibGlzaGVkIjogImRlc2MifV0sICJwYWdlIjogMiwgInJlc3VsdHNQZXJQYWdlIjogMjQsICJkZWJ1ZyI6IGZhbHNlLCAic3RhdHMiOiBbXX0="
  ],
  "pages": 1,
  "center": {
@@ -13,11 +13,10 @@
  "max_alerts_per_run": 20,
  "start_windows": [
   {
-   "from": "2026-09-13",
-   "to": "2026-09-20",
-   "end_by": "2026-09-20",
+   "from": "2026-09-12",
+   "to": "2026-09-18",
    "min_nights": 0,
-   "note": "9/13-9/20 gap 监控：不限宠物、不限天数（Yihan 确认）"
+   "note": "9/12-9/18 gap 监控：不限宠物、不限天数、不限结束日"
   }
  ],
  "exclude_species": []

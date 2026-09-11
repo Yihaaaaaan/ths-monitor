@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Generate gap-config.json: 9/13-9/20 不限宠物不限天数，湾区 90km。"""
+"""Generate gap-config.json: 9/12-9/18 不限宠物不限天数，湾区 90km。"""
 import json, base64, os
 
 NON_CAT = ["dog", "reptile", "horse", "fish", "bird", "poultry",
@@ -11,8 +11,8 @@ def make_url(page):
         "filters": {
             "activeMembership": True,
             "assignments": {
-                "dateFrom": "2026-09-13",
-                "dateTo": "2026-09-20",
+                "dateFrom": "2026-09-12",
+                "dateTo": "2026-09-18",
                 "reviewing": False,
                 "confirmed": False,
             },
@@ -38,8 +38,8 @@ cfg = {
     "max_applications": 4,
     "max_alerts_per_run": 20,
     "start_windows": [
-        {"from": "2026-09-13", "to": "2026-09-20", "end_by": "2026-09-20", "min_nights": 0,
-         "note": "9/13-9/20 gap 监控：不限宠物、不限天数（Yihan 确认）"}
+        {"from": "2026-09-12", "to": "2026-09-18", "min_nights": 0,
+         "note": "9/12-9/18 gap 监控：不限宠物、不限天数、不限结束日"}
     ],
     "exclude_species": [],
 }
